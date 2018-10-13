@@ -1,0 +1,166 @@
+\documentclass[final]{beamer}
+\usetheme{RJH}
+\usepackage[english]{babel}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{textpos}
+\usepackage{wrapfig}
+\usepackage{longtable}
+\usepackage{marvosym}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\graphicspath{{images/}}
+
+%\pgfdeclareimage[height=4cm]{logo-TUD.png}
+%\logoleft{TUD_logo.png}
+%\pgfdeclareimage[height=4cm]{logo_Lap.jpg}
+%\logoright{TUD_logo.png}
+%\logo{\includegraphics[height=0.5cm]{logo-TUD.png}} 
+%\logo{\includegraphics[scale=0.2]{logo-TUD.png}}
+%\institute[My Institute/company]{My Institute/company}\\ \pgfdeclareimage[height=0.5cm]{logo-TUD.png} 
+%\pgfdeclareimage[height=1.2cm]{mylogo}{logo-TUD.png} 
+
+\title{\textit{Mapping land cover changes using Landsat TM: \\a case study of Yamal ecosystems, Arctic Russia}}
+\author{Lemenkova Polina$^1$, Forbes Bruce C.$^2$, and Kumpula Timo$^3$\\ \small $^1$Dresden University of Technology (TU Dresden), Germany; $^2$Arctic Center, University of Lapland (Rovaniemi, Finland); $^3$University of Eastern Finland (Joensuu, Finland)}
+\footer{This poster is created in \LaTeX \hspace{4em}Contact \LARGE \Letter \normalsize: \texttt{Polina.Lemenkova@mailbox.tu-dresden.de}}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\institute{Dresden Universty of Technology\\\scalebox{2}{\insertlogo}}
+
+\begin{document}
+
+\begin{textblock}{6}(0.5,1.0)
+	 \includegraphics[scale=0.12]{logo-TUD.png}
+\end{textblock}
+
+\begin{textblock}{6}(70.,0.2)
+	\includegraphics[scale=1.2]{logo_Lap.jpg}
+\end{textblock}
+
+\begin{textblock}{6}(74.,2.6)
+	\includegraphics[scale=1.4]{logo-joensuu.png}
+\end{textblock}
+
+\begin{frame}{} 
+%%%%%%%%%%%%%%%%%
+\begin{textblock}{38.0}(1,6)
+\begin{block}{Summary}
+This paper details changes in land cover types in tundra landscapes (Yamal) during since 1988. The research method is supervised classification (Minimal Distance) of the Landsat TM scenes. The new approach of the current work is application of ILWIS GIS and RS tools for Bovanenkovo region.
+\end{block}
+
+\begin{block}{Research area: location \& environmental settings}
+\begin{wrapfigure}{l}{0.28\textwidth}
+ 	   \includegraphics[scale=0.5]{location.jpg}\caption{1. \tiny{Yamal Peninsula}}
+\end{wrapfigure}
+ The research area is geographically located on the Bovanenkovo region, the north-western part of
+Yamal Peninsula, West Siberia, Russia (Fig.1). 
+The Yamal Peninsula is a flat homogeneous lowland region with low-lying plains of heights $<$90m. Such geographic settings create specific local environmental conditions in the region. Thus, Yamal is the worldÕs largest high-latitude wetland system covering in total 900,000 km$^2$ of peatlands, complex system of wetlands, dense lake and river network. Typical for this region are seasonal flooding, active erosion processing, permafrost distribution and intensive local landslides. Dominating vegetation types are typical tundra species (heath, grasses, moss, and lichens), and woody plants (shrubs and willows).
+\end{block}
+
+\begin{block}{Research data}
+
+\begin{wrapfigure}{l}{0.64\textwidth}
+\begin{figure}
+	\centering
+	\subfloat {\includegraphics[width=0.27\textwidth]{image-1988.jpg}}
+	\hspace{5mm}
+	\subfloat {\includegraphics[width=0.3\textwidth]{image-2011.png}}
+	\caption{2. Landsat TM images: 1988 (left) and 2011 (right)}
+\end{figure}
+\end{wrapfigure}
+The research data are orthorectified Landsat TM scenes covering north-west of Yamal. The images have a time span of 23 years: 1988-08-07 and 2011-07-14, taken in growing season when vegetation coverage is clearly visible.
+\end{block}
+
+\begin{block}{Methods}
+The research methods consist of image classification, spatial analysis and thematic mapping, technically performed in ILIWIS GIS. Research steps: \\
+\textbf{1. Data pre-processing}: \textbf{a)} import .img into ASCII raster format (GDAL). After converting, each image contained collection of 7 Landsat raster bands \textbf{b)} visual color and contrast enhancement \textbf{c)} geographic referencing of Landsat scenes: UTM (Universal Transverse Mercator), Eastern Zone 42, Northern Zone W, WGS 1984 datum (Georeference Corner Editor, ILWIS).
+ \begin{wrapfigure}{l}{0.3\textwidth}
+ 	   \includegraphics[scale=0.4]{whole-map.jpg}\caption{3. Selecting AOI (study area)}
+\end{wrapfigure} 
+\textbf{2. Research area} selection. The area of interest (AOI) was identified and cropped on the raw images (Fig.3). This area shows Bovanenkovo region in a large scale. The AOI area best represents typical tundra landscapes. \\
+\textbf{3. Image classification} method is supervised classification (Minimal Distance), which is based on the spatial analysis of spectral signatures of object variables, i.e. vegetation types. The classes sampling was performed using Sample Set tool in ILWIS GIS. The training pixels for each land cover type were selected as representative samples and stored as classification key. They have contrasting colors, visually visible and distinguishable on the image. The defined classes include \emph{\small{shrub tundra, willows, tall willows, short shrub tundra, sparse short shrub tundra, dry grass heath, sedge grass tundra, dry short shrub tundra, dry short shrub sedge tundra, wet peatland, peatland (sphagnum)}}. The pixels were associated with land cover classes, using their DNs, similar to the key samples. \\
+\textbf{4. Thematic mapping}:  layout of main research results, represented as maps of the land cover classes. The created domain ÒLand classesÓ  includes legend with representation colors visualizing each category. 
+
+\end{block}
+
+\begin{block}{Funding}
+\small The financial support of this research has been provided by the Fellowship of the \emph{Center for
+International Mobility (CIMO)} of Finland. Contract No. TM-10-7124 (Decision 9.11.2010).
+\end{block}
+
+\end{textblock}
+
+\begin{textblock}{41.5}(41,6)
+\begin{block}{Results}
+The research output includes following results:\\ 
+\textbf{1)} two thematic maps of land cover types in Bovanenkovo area, Yamal (Fig.4)\\ \textbf{2)} calculation of the areas in \textit{ha} of land cover types (Tab.1). 
+
+\begin{figure}[H]
+	\centering
+	\subfloat {\includegraphics[width=0.4\textwidth]{Map-1988.png}}
+	\hspace{5mm}
+	\subfloat {\includegraphics[width=0.4\textwidth]{Map-2011.png}}
+	\caption{4. Land Cover Classes in Bovanenkovo area, Yamal Peninsula: 1988 (left) and 2011 (right)}
+\end{figure}
+
+The assessment of the areas of all land cover classes shows following results. Willows covers 2750,57 ha in 2011, which is more than in 1988, when it covered 1547,52 ha (both \emph{'tall willows'} \& \emph{'willows'} classes). Noticeable is increase in tundra vegetation: \emph{'short shrub tundra'}, \emph{'sparse short shrub tundra'} and \emph{'dry short shrub tundra'} have more areas covered in 2011 comparing to 1988: almost 5442,00 ha vs 1823,00 ha.
+\begin{table}[H]\footnotesize
+	%\rowcolors{1}{Ivory}{GhostWhite}
+	\caption{1. Statistics on the land cover classes, Bovanenkovo region, Yamal Pennsula.}
+	\begin{center}
+		\begin{tabular}{|p{18em} | c | c | c | c |}
+			\hline\hline
+			\texttt{Land Cover Class} & 1988, \# pixels & 2011, \# pixels & 1988, ha & 2011, ha \\ \hline\hline
+			\texttt{Shrub tundra} & 220447 & 168226 & 1146.3244 & 874.7752 \\ \hline
+			\texttt{Short shrub tundra} & 165079 & 270158 & 858.4108 & 1404.8216 \\ \hline
+			\texttt{Willows} & 193645 & 457004 & 1006.954 & 2376.4208 \\ \hline
+			\texttt{Tall willows} & 103954 & 71952 & 540.5608 & 374.1504 \\ \hline
+			\texttt{Sparse short shrub tundra} & 176511 & 759380 & 917.8572 & 3948.776 \\ \hline
+			\texttt{Dry grass heath} & 641420 & 231719 & 3335.384 & 1204.9388 \\ \hline
+			\texttt{Sedge grass tundra} & 27545 & 57052 & 143.234 & 296.6704 \\ \hline
+			\texttt{Dry short shrub tundra} & 8984 & 16993 & 46.7168 & 88.3636 \\ \hline
+			\texttt{Wet peatland} & 761231 & 531809 & 3958.4012 & 2765.4068 \\ \hline
+			\texttt{Peatland (sphagnum)} & 120328 & 93979 & 625.7056 & 488.6908 \\ \hline
+			\texttt{Dry short shrub-sedge tundra} & 173693 & 92242 & 903.2036 & 479.6584 \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+\vspace{1em}
+ Increase of wooden vegetation class goes along with shrunk of grass and heath areas: \emph{'dry grass heath'} occupied area of 3335.39 ha in 1988, while currently it covers 1204.94 ha. Slight decrease can be noticed in the \emph{'peatlands'} and \emph{'wet peatlands'} classes: 3958.40 ha against 2765.41 ha in 2011 by \emph{'wet peatlands'}, and 625.71 ha in 1988 versus 488.69 ha by \emph{'peatland (sphagnum)'} class.
+\end{block}
+
+\begin{block}{Conclusion}
+The GIS-based mapping of the northern ecosystems is important tool for the landscape monitoring and management. Processing of remote sensing data (\emph{e.g.} Landsat TM scenes) by means of GIS (\emph{e.g.} ILWIS) improves technical aspects of the landscape studies, since it enables assessment of spatio-temporal changes in vegetation coverage. Spatial analysis of land cover types in northern landscapes can help to detect local environmental changes in Arctic regions.\\ Current research details changes in the land cover types in Bovanenkovo region, Yamal Peninsula, during the past 2 decades. These results are received as a result of the spatial analysis of classified images. The GIS mapping is based on the results of the image classification. The research results presented in the current work illustrate spatial distribution of land cover types in the selected area. \\Analysis of the results shows noticeable overall increase of woody vegetation (willows and shrubs) and decrease of peatlands, grass and heath areas. This illustrates environmental process of greening in Arctic, i.e. the unnatural increase of woody plants. The gradual changes in plant species patterns and distribution affect landscape structure in Yamal ecosystems. The triggering factors for these processes could be complex environmental changes in Arctic, as well as local cryogenic processes (\emph{e.g.} successive change in vegetation recovering after cryogenic landslides). 
+ 
+\end{block}
+
+\begin{block}{References}
+\begin{enumerate}\tiny
+\item Kremenetski, K.V., Velichko, A.A., Borisova, O.K., MacDonald, G.M., Smith, L.C., Frey, K.E. and
+Orlova, L.A. [2003]. Peatlands of the Western Siberian lowlands: current knowledge on zonation,
+carbon content and Late Quaternary history. \emph{Quaternary Science Reviews, 22}, 703Ð723.
+\item Leibman, M.O. and Kizyakov, A.I. [2007]. Kriogennyie opolzni Yamala Yugorskovo poluostrova
+(Cryogenic Landslides of the Yamal and Yugorsky Peninsula). Moscow, \emph{Earth Cryosphere Institute,
+Siberian Branch, Russian Academy of Science} (in Russian).
+\item Ukraintseva N.G and Leibman M.O. [2007]. The effect of cryogenic landslides (active-layer
+detachments) on fertility of tundra soils on Yamal Peninsula, Russia, \emph{1st North American Landslide
+Conference}. Eds.: V. Schaefer, R. Schuster and A. Turner (Vail, CO: Omnipress),1605-1615.
+\item Walker, D.A., Leibman, M.O., Epstein, H.E., Forbes, B.C., Bhatt, U.S., Raynolds, M.K., Comiso,
+J.C., Gubarkov, A.A., Khomutov, A.V., Jia., G.J., KaarlejŠrvi, E., Kaplan, J.O., Kumpula, T., Kuss, P.,
+Matyshak, g., Moskalenko, N.G., Orekhov, P., Romanovsky, V.E., Ukraintseva, N.G. and Yi, Q.
+[2009]. Spatial and temporal patterns of greenness on the Yamal Peninsula, Russia: interactions of
+ecological and social factors affecting the Arctic normalized difference vegetation index.
+\emph{Environmental Research Letters, 4} (16), 045004.
+\end{enumerate}
+\end{block}
+
+\end{textblock}
+
+\end{frame}
+\end{document}
